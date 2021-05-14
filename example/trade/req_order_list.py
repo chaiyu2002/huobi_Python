@@ -17,6 +17,6 @@ account_spot = account_client.get_account_by_type_and_symbol(account_type=Accoun
 if account_spot and account_spot.id:
     trade_client = TradeClient(api_key=g_api_key, secret_key=g_secret_key)
     PrintBasic.print_basic(account_spot.id, "Account ID")
-    trade_client.req_order_list(symbol="eosusdt", account_id=account_spot.id, callback=callback, order_states = OrderState.CANCELED, client_req_id = "xxx-01-1")
+    trade_client.req_order_list(symbol="dogeusdt", account_id=account_spot.id, callback=callback, order_states = OrderState.CANCELED, client_req_id ="xxx-01-1")
 
 

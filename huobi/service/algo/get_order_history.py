@@ -14,6 +14,7 @@ class GetOrderHistoryService:
 
         def parse(dict_data):
             data = dict_data.get("data", {})
+            print(f"data: {data}")
             return default_parse_list_dict(data, OrderHistoryItem)
 
         return RestApiSyncClient(**kwargs).request_process(HttpMethod.GET_SIGN, channel, self.params, parse)
